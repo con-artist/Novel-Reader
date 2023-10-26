@@ -8,7 +8,7 @@ let theme = createTheme({
       sm: 545,
       md: 768,
       lg: 992,
-      xl: 1200,
+      xl: 1280,
     },
   },
   status: {
@@ -31,7 +31,7 @@ let theme = createTheme({
       fontSize: 40,
       lineHeight: 1.167,
       letterSpacing: "-0.01562em",
-      color: "#000000",
+      color: "#FFFFFF",
     },
     h2: {
       fontFamily: "'Poppins', sans-serif",
@@ -39,7 +39,7 @@ let theme = createTheme({
       fontSize: 36,
       lineHeight: 1.2,
       letterSpacing: "-0.00833em",
-      color: "#000000",
+      color: "#FFFFFF",
     },
     h3: {
       fontFamily: "'Poppins', sans-serif",
@@ -47,7 +47,7 @@ let theme = createTheme({
       fontSize: 28,
       lineHeight: 1.167,
       letterSpacing: "0em",
-      color: "#000000",
+      color: "#FFFFFF",
     },
     h4: {
       fontFamily: "'Poppins', sans-serif",
@@ -55,7 +55,7 @@ let theme = createTheme({
       fontSize: 24,
       lineHeight: 1.235,
       letterSpacing: "0.00735em",
-      color: "#000000",
+      color: "#FFFFFF",
     },
     h5: {
       fontFamily: "'Poppins', sans-serif",
@@ -63,7 +63,7 @@ let theme = createTheme({
       fontSize: 18,
       lineHeight: 1.334,
       letterSpacing: "0em",
-      color: "#000000",
+      color: "#FFFFFF",
     },
     h6: {
       fontFamily: "'Poppins', sans-serif",
@@ -71,7 +71,7 @@ let theme = createTheme({
       fontSize: 16,
       lineHeight: 1.6,
       letterSpacing: "0.0075em",
-      color: "#000000",
+      color: "#FFFFFF",
     },
     subtitle1: {
       fontFamily: "'Inter', 'Helvetica', 'Arial', sans-serif",
@@ -113,7 +113,7 @@ let theme = createTheme({
         root: {
           borderRadius: 10,
           textTransform: "none",
-          minWidth: "100px",
+          minWidth: "0px",
           padding: "6px 18px",
           outline: "none",
           "&:focus": {

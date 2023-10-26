@@ -5,14 +5,16 @@ import theme from "@/src/common/config/theme";
 
 const Section = ({ boxProps, containerProps, children }) => {
   return (
-    <Box component="section" sx={{ width: "100%" }}>
+    <Box component="section">
       <Container
-        maxWidth={1280}
-        mx={{ xs: 3, lg: 6 }}
+        maxWidth="xl"
         sx={{ [theme.breakpoints.down("sm")]: { px: 3 } }}
         {...containerProps}
       >
-        {children}
+        <Box component="section" {...boxProps}>
+          {" "}
+          {children}
+        </Box>
       </Container>
     </Box>
   );

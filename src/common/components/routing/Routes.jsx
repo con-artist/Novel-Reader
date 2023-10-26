@@ -7,7 +7,12 @@ import Layout from "../Layout/components/Layout";
 const Routes = ({ Component, pageProps }) => {
   const router = useRouter();
 
-  return <Layout></Layout>;
+  return (
+    <Layout>
+      {" "}
+      <Component {...pageProps} />
+    </Layout>
+  );
 };
 
 export default Routes;
