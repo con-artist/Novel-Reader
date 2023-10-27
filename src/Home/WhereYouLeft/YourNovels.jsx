@@ -4,54 +4,105 @@ import Typography from "@mui/material/Typography";
 
 import Section from "@/src/common/components/Layout/utils/Section";
 import ListNovelsCarousel from "../common/ListNovelsCarousel";
+import { neutral } from "@/src/common/config/colors";
 
 const YourNovels = () => {
   const slides = [
     {
       index: 1,
-      background: "/HeroSection/bg1.svg",
-      character: "/HeroSection/char1.svg",
-      height: "103%",
-      name: "After Ten Millennia in Hell",
-      description:
-        "Henry Morris, the 8th-Circle Mage, stood on the execution platform. When the emperor, his friend, had passed, his son had became a puppet of the nobles. Soon after, a purge had ensued, led by the forces opposing Henry. Even in the face of death, all Henry could think was that he hated the new emperor and the nobles. ",
+      cover: "/YourNovels/novel1.svg",
+      name: "Ascension",
+      rating: 9,
       status: "Ongoing",
+      completetion_per: 30,
     },
     {
       index: 2,
-      background: "/HeroSection/bg2.svg",
-      character: "/HeroSection/char2.svg",
-      height: "103%",
-      name: "Rebirth of the 8th-Circle Mage",
-      description:
-        "Oh Kang-Woo suddenly fell into Hell one day. The only things he had were his desire to live and the Authority of Predation. He devoured hundreds of thousands of demons from the First Hell all the way to the Ninth Hell, and even made the seven princes of Hell bow down to him.",
+      cover: "/YourNovels/novel2.svg",
+      name: "The Beginning After The End",
+      rating: 9.3,
       status: "Ongoing",
+      completetion_per: 85,
     },
     {
       index: 3,
-      background: "/HeroSection/bg3.svg",
-      character: "/HeroSection/char3.svg",
-      height: "103%",
-      name: "Walking Daddy",
-      description:
-        "A zombie virus started infecting the world one day. The number of infected grew exponentially as days passed... A group of zombies began attacking me and my daughter while we hid at home!",
+      cover: "/YourNovels/novel3.svg",
+      name: "Reckoning",
+      rating: 8.5,
       status: "Ongoing",
+      completetion_per: 65,
     },
     {
       index: 4,
-      background: "/HeroSection/bg4.svg",
-      character: "/HeroSection/char4.svg",
-      height: "103%",
-      name: "Omniscient Reader's Viewpoint",
-      description:
-        "Dokja was a typical office worker who spent his free time reading his favorite web fiction, 'Three Ways to Survive the Apocalypse.' However, when the novel becomes a reality, he is the only one who knows how the world will end. ",
+      cover: "/YourNovels/novel1.svg",
+      name: "Ascension",
+      rating: 9,
       status: "Ongoing",
+      completetion_per: 16,
+    },
+    {
+      index: 5,
+      cover: "/YourNovels/novel2.svg",
+      name: "The Beginning After The End ",
+      rating: 9.3,
+      status: "Ongoing",
+      completetion_per: 10,
+    },
+    {
+      index: 6,
+      cover: "/YourNovels/novel3.svg",
+      name: "The Cult Leader in the Clergy Academy The Cult Leader in the Clergy Academy",
+      rating: 8.5,
+      status: "Ongoing",
+      completetion_per: 34,
+    },
+    {
+      index: 7,
+      cover: "/YourNovels/novel1.svg",
+      name: "First Immortal of the Sword",
+      rating: 9,
+      status: "Ongoing",
+      completetion_per: 70,
+    },
+    {
+      index: 8,
+      cover: "/YourNovels/novel2.svg",
+      name: "Beyond the Timescape",
+      rating: 9.3,
+      status: "Ongoing",
+      completetion_per: 20,
+    },
+    {
+      index: 9,
+      cover: "/YourNovels/novel3.svg",
+      name: "Emperor’s Domination",
+      rating: 8.5,
+      status: "Ongoing",
+      completetion_per: 50,
     },
   ];
 
   return (
-    <Section boxProps={{ sx: { px: 10 } }}>
-      <ListNovelsCarousel slides={slides} />
+    <Section boxProps={{ sx: { px: 10, mt: 10 } }}>
+      <Box display="flex" flexDirection="column" rowGap={4}>
+        <Box display="flex" justifyContent="space-between" alignItems="center">
+          <Typography
+            variant="h2"
+            sx={{
+              color: neutral["A500"],
+              fontWeight: 600,
+              fontSize: { xs: 12, lg: 24 },
+            }}
+          >
+            Continue Reading
+          </Typography>
+        </Box>
+        <ListNovelsCarousel
+          slides={slides}
+          prevButtonClass="YourNovelsPrev"
+          nextButtonClass="YourNovelsNext"
+        />
+      </Box>
     </Section>
   );
 };

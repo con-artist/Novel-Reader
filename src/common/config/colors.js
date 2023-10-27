@@ -16,6 +16,7 @@ export const neutral = {
 
 export const Blues = {
   A100: "#3399FF",
+  A200: "#1976d2",
 };
 
 export const Green = {

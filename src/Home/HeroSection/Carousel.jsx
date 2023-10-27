@@ -14,12 +14,7 @@ import HeroCard from "./HeroCard";
 const Carousel = ({ slides }) => {
   return (
     <>
-      <Box
-        display="flex"
-        flexDirection="column"
-        position="relative"
-        overflow="visible"
-      >
+      <Box display="flex" flexDirection="column" position="relative">
         <Swiper
           spaceBetween={20}
           navigation={{

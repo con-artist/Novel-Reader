@@ -10,8 +10,9 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import styles from "./styles.module.css";
 import NovelCard from "./NovelCard";
+import { Blues, neutral } from "@/src/common/config/colors";
 
-const ListNovelsCarousel = ({ slides }) => {
+const ListNovelsCarousel = ({ slides, prevButtonClass, nextButtonClass }) => {
   return (
     <>
       <Box
@@ -21,11 +22,11 @@ const ListNovelsCarousel = ({ slides }) => {
         width="100%"
       >
         <Swiper
-          spaceBetween={10}
+          // spaceBetween={10}
           slidesPerView={"auto"}
           navigation={{
-            prevEl: ".swiper-prev",
-            nextEl: ".swiper-next",
+            prevEl: `.${prevButtonClass}`,
+            nextEl: `.${nextButtonClass}`,
           }}
           pagination={{
             clickable: true,
@@ -57,9 +58,13 @@ const ListNovelsCarousel = ({ slides }) => {
         >
           <Button
             variant="outlined"
-            className="swiper-prev"
+            className={prevButtonClass}
             sx={{
               width: 25,
+              // color: neutral["A500"],
+              // "&:hover": {
+              //   color: Blues["A200"],
+              // },
               height: 25,
               borderRadius: 1,
               p: 1,
@@ -72,10 +77,11 @@ const ListNovelsCarousel = ({ slides }) => {
           </Button>
           <Button
             variant="outlined"
-            className="swiper-next"
+            className={nextButtonClass}
             sx={{
               width: 25,
               height: 25,
+              // color: neutral["A500"],
               borderRadius: 1,
               p: 0,
               border: "1px solid #2F3A46",

@@ -123,12 +123,6 @@ let theme = createTheme({
         sizeSmall: {
           padding: "6px 12px",
         },
-        outlinedPrimary: {
-          // "&:hover": {
-          //   backgroundColor: "#44924C !important",
-          //   color: "#FFFFFF !important",
-          // },
-        },
       },
     },
     MuiFormHelperText: {
