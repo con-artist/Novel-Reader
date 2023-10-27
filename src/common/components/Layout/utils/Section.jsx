@@ -12,7 +12,6 @@ const Section = ({ boxProps, containerProps, children }) => {
         {...containerProps}
       >
         <Box component="section" {...boxProps}>
-          {" "}
           {children}
         </Box>
       </Container>

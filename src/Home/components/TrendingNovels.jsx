@@ -3,10 +3,10 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 import Section from "@/src/common/components/Layout/utils/Section";
-import ListNovelsCarousel from "../common/ListNovelsCarousel";
+import ListNovelsCarousel from "../common/components/ListNovelsCarousel";
 import { neutral } from "@/src/common/config/colors";
 
-const YourNovels = () => {
+const TrendingNovels = () => {
   const slides = [
     {
       index: 1,
@@ -14,7 +14,6 @@ const YourNovels = () => {
       name: "Ascension",
       rating: 9,
       status: "Ongoing",
-      completetion_per: 30,
     },
     {
       index: 2,
@@ -22,7 +21,6 @@ const YourNovels = () => {
       name: "The Beginning After The End",
       rating: 9.3,
       status: "Ongoing",
-      completetion_per: 85,
     },
     {
       index: 3,
@@ -30,7 +28,6 @@ const YourNovels = () => {
       name: "Reckoning",
       rating: 8.5,
       status: "Ongoing",
-      completetion_per: 65,
     },
     {
       index: 4,
@@ -38,7 +35,6 @@ const YourNovels = () => {
       name: "Ascension",
       rating: 9,
       status: "Ongoing",
-      completetion_per: 16,
     },
     {
       index: 5,
@@ -46,7 +42,6 @@ const YourNovels = () => {
       name: "The Beginning After The End ",
       rating: 9.3,
       status: "Ongoing",
-      completetion_per: 10,
     },
     {
       index: 6,
@@ -54,7 +49,6 @@ const YourNovels = () => {
       name: "The Cult Leader in the Clergy Academy The Cult Leader in the Clergy Academy",
       rating: 8.5,
       status: "Ongoing",
-      completetion_per: 34,
     },
     {
       index: 7,
@@ -62,7 +56,6 @@ const YourNovels = () => {
       name: "First Immortal of the Sword",
       rating: 9,
       status: "Ongoing",
-      completetion_per: 70,
     },
     {
       index: 8,
@@ -70,7 +63,6 @@ const YourNovels = () => {
       name: "Beyond the Timescape",
       rating: 9.3,
       status: "Ongoing",
-      completetion_per: 20,
     },
     {
       index: 9,
@@ -78,12 +70,11 @@ const YourNovels = () => {
       name: "Emperor’s Domination",
       rating: 8.5,
       status: "Ongoing",
-      completetion_per: 50,
     },
   ];
 
   return (
-    <Section boxProps={{ sx: { px: 10, mt: 10 } }}>
+    <Section boxProps={{ sx: { px: 10, mt: 6 } }}>
       <Box display="flex" flexDirection="column" rowGap={4}>
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Typography
@@ -91,20 +82,20 @@ const YourNovels = () => {
             sx={{
               color: neutral["A500"],
               fontWeight: 600,
-              fontSize: { xs: 12, lg: 24 },
+              fontSize: { xs: 12, lg: 28 },
             }}
           >
-            Continue Reading
+            Most Popular Novels
           </Typography>
         </Box>
         <ListNovelsCarousel
           slides={slides}
-          prevButtonClass="YourNovelsPrev"
-          nextButtonClass="YourNovelsNext"
+          prevButtonClass="PopularNovelsPrev"
+          nextButtonClass="PopularNovelsNext"
         />
       </Box>
     </Section>
   );
 };
 
-export default YourNovels;
+export default TrendingNovels;

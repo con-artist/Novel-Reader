@@ -74,20 +74,22 @@ const NovelCard = ({ data }) => {
             {data.rating}
           </Typography>
         </Box>
-        <Box
-          display="flex"
-          position="absolute"
-          bgcolor="#161C20"
-          style={{
-            bottom: 3,
-            right: 3,
-            borderRadius: "50%",
-            border: "1px solid #2F3A46",
-            backdropFilter: "blur(8px)",
-          }}
-        >
-          <CompletionPercentage value={data.completetion_per} />
-        </Box>
+        {data?.completetion_per && (
+          <Box
+            display="flex"
+            position="absolute"
+            bgcolor="#161C20"
+            style={{
+              bottom: 3,
+              right: 3,
+              borderRadius: "50%",
+              border: "1px solid #2F3A46",
+              backdropFilter: "blur(8px)",
+            }}
+          >
+            <CompletionPercentage value={data.completetion_per} />
+          </Box>
+        )}
       </Box>
       <Box
         display="flex"

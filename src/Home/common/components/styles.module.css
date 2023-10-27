@@ -15,14 +15,5 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  margin-right: 12px !important;
-}
-.swiper_pagination_bullet {
-  background-color: white;
-  /* Your styles for pagination bullets */
-}
-
-.swiper_pagination_bullet_active {
-  background-color: #3399ff;
-  /* Your styles for active pagination bullet */
+  margin-right: 16px !important;
 }

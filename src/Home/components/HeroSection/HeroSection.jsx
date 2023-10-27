@@ -1,10 +1,15 @@
 import React from "react";
-import "swiper/css";
+import { SwiperSlide } from "swiper/react";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import Box from "@mui/material/Box";
 
-import Carousel from "./Carousel";
 import Section from "@/src/common/components/Layout/utils/Section";
+import Carousel from "@/src/common/components/Carousel/Carousel";
+import NavigationButtons from "@/src/common/components/Carousel/NavigationButtons";
+import styles from "./styles.module.css";
+import HeroCard from "./HeroCard";
 
 const HeroSection = () => {
   const slides = [
@@ -51,7 +56,26 @@ const HeroSection = () => {
   ];
   return (
     <Section boxProps={{ sx: { px: 10 } }}>
-      <Carousel slides={slides} />
+      <Box display="flex" flexDirection="column" position="relative">
+        <Carousel
+          prevButtonClass={"prev_hero_slide"}
+          nextButtonClass={"next_hero_slide"}
+          customStyles={styles.swiper}
+        >
+          {slides.map((slide) => {
+            return (
+              <SwiperSlide className={styles.swiper_slide} key={slide.index}>
+                <HeroCard data={slide} />
+              </SwiperSlide>
+            );
+          })}
+        </Carousel>
+
+        <NavigationButtons
+          prevButtonClass={"prev_hero_slide"}
+          nextButtonClass={"next_hero_slide"}
+        />
+      </Box>
     </Section>
   );
 };

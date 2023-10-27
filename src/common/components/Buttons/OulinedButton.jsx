@@ -17,6 +17,7 @@ const OulinedButton = ({ sx, ...props }) => {
           color: neutral["A500"],
           "&:hover": {
             color: Blues["A200"],
+            borderColor: Blues["A200"],
           },
           ...(sx || {}),
         }}
